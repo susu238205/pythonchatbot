@@ -34,6 +34,10 @@ chatlogs = [
 ]
 datas = []
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello from Render!"}
+
 # => Text Generate
 # => Template (http://127.0.0.1:8000/)
 
