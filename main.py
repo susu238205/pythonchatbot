@@ -41,7 +41,7 @@ def read_root():
 # => Text Generate
 # => Template (http://127.0.0.1:8000/)
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/", response_class=RedirectResponse)
 async def chatpage(request: Request):
     return templates.TemplateResponse(
         # request= request,name="layout.html"
@@ -153,7 +153,7 @@ async def chat(websocket: WebSocket):
 # => Image Generate 
 # => Template (http://127.0.0.1:8000/image)
 
-@app.get("/image", response_class=HTMLResponse)
+@app.get("/image", response_class=RedirectResponse)
 async def image(request: Request):
     return templates.TemplateResponse(
         # request= request,name="image.html"
