@@ -1,0 +1,87 @@
+
+
+=> Install Others 
+
+https://fastapi.tiangolo.com/
+https://www.uvicorn.org/
+pip install fastapi uvicorn 
+
+https://pypi.org/project/python-multipart/
+pip install python-multipart
+
+https://jinja.palletsprojects.com/en/stable/
+https://pypi.org/project/aiofiles/
+pip install aiofiles jinja 2
+
+pip3 list or pip list
+
+mkdir part3chatbot 
+cd part3chatbot/
+python -m venv fastapienv
+ls 
+source fastapienv/bin/activate 
+pip3 list 
+// deactivate
+
+----------------------------------------------------------------------------
+
+=> ENV (version python-dotenv    1.1.0)
+
+1. create file
+.env 
+
+2. install python-dotenv
+https://pypi.org/project/python-dotenv/
+pip install python-dotenv 
+
+3. Import 
+import os 
+from dotenv import load_dotenv
+
+
+----------------------------------------------------------------------------
+
+=> Websocket (version websockets   15.0.1)
+
+official doc (for js)
+https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
+
+1. Install websockets
+https://fastapi.tiangolo.com/reference/websockets/?h=websockets
+pip install websockets
+
+2. Import 
+from fastapi import FastAPI, WebSocket
+
+----------------------------------------------------------------------------
+
+=> Deploy on Render.com
+
+my workspace 
+palletsprojects
+Click "New Menu" > Web Service
+git provider
+my github acc
+config in github
+acc
+authentication code
+only select repo
+search python fastapi batch 1 
+Name = pythonchatbot
+Project Optional = No Project
+Language = Python3
+Branch = main 
+Region = Singapore (Southeast Asia)
+Build Command = pip install -r modules.txt
+Start Command = uvicorn main:app --host 0.0.0.0 -- port 3000
+Free Plan
+OPENAI_API_KEY              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
+Click "Deploy Web Service"
+
+
+----------------------------------------------------------------------------
+
+https://localhost:8000/docs
+uvicorn main:app --reload
+
+----------------------------------------------------------------------------

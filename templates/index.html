@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Chatbot</title>
+  <link href="/static/images/boticon.png" rel="icon" type="image/png" />
+  <link href="{{ request.url_for('static', path='libs/bootstrap-5.3.6-dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Your custom CSS -->
+  <link href="{{ request.url_for('static', path='style.css')}}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <header>
+    <!-- start navbar -->
+    {% include "navbar.html" %}
+    <!-- end navbar -->
+  </header>
+
+
+  <script src="{{ request.url_for('static', path='libs/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
+</body>
+</html>
