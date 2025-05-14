@@ -3,7 +3,7 @@ from fastapi import FastAPI, Form, Request, WebSocket
 from typing import Annotated
 
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 import os
@@ -36,7 +36,7 @@ datas = []
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello from Render!"}
+    return RedirectResponse(url="/chatpage")
 
 # => Text Generate
 # => Template (http://127.0.0.1:8000/)
